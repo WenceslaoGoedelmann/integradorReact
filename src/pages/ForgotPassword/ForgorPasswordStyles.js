@@ -8,14 +8,25 @@ export const ForgotContainer = styled.div`
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
-  height: calc(100vh - 400px);
-  margin-top: 110px;
+  height: 250px;
+  margin-top: 120px;
   background:rgb(150, 150, 150);
   margin-left: 10%;
   margin-right: 10%;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 10px 5px 5px black;
+  @media (max-width: 650px) {
+    margin-top: 100px;
+    gap: 10px;
+    padding: 5px;
+    height: 200px;
+    }  
+  h1{
+    @media (max-width: 650px) {
+        font-size: 15px;
+    }  
+  }
 `;
 
 export const Form = styled(FormikForm)`
@@ -29,7 +40,7 @@ export const Form = styled(FormikForm)`
 export const ForgotWrapper = styled.div`
 width: 100%;
 height: auto;
-padding-bottom:250px;
+padding-bottom:220px;
 display: flex;
 justify-content: center;
 background-color: rgb(50, 50, 50); 

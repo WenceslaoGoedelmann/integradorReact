@@ -5,9 +5,9 @@ const ItemCard = ({title, price,quantity,img}) => {
   return (
     <ItemCardContainer>
     <img src={img} alt={title} />
-    <div>{title}</div>
-    <div>{quantity}</div>
-    <div>${price}</div>
+    <p>{title}</p>
+    <p>{quantity}</p>
+    <p>${price}</p>
     </ItemCardContainer>
   )
 }

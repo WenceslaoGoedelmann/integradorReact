@@ -17,4 +17,9 @@ export const ButtonSubmitStyled = styled(motion.button)`
     cursor: not-allowed;
     opacity: 0.5;
   }
+  @media (max-width: 750px) {
+    font-size: 10px;
+    padding: 0.6rem 1rem;
+    margin-top: 8px;
+    }
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import { ItemsContainer, MyOrderCardContainer } from "./MyOrdersStyles";
+import {  ItemsContainer, MyOrderCardContainer, TitleContainer } from "./MyOrdersStyles";
 import ItemCard from "./ItemCard";
 
 const MyOrderCard = ({ total, _id, items,createdAt,price,shippingCost }) => {
@@ -9,16 +9,18 @@ const MyOrderCard = ({ total, _id, items,createdAt,price,shippingCost }) => {
   const fecha= dia+"/"+mes+"/"+anio
   return (
     <MyOrderCardContainer>
-      <div>Orden N°: {_id.slice(0, 7)}</div>
-      <div>Fecha: {fecha}</div>
+      <TitleContainer>
+      <h4>Pedido N°: {_id.slice(0, 7)}</h4>
+      <h4>Fecha: {fecha}</h4>
+      </TitleContainer>
       <ItemsContainer>
         {items.map((items) => (
           <ItemCard key={items.id} {...items} />
         ))}
       </ItemsContainer>
-      <div>Subtotal: ${price}</div>
-      <div>Costo Envio: ${shippingCost}</div>
-      <div>Costo total: ${total}</div>
+      <p>Subtotal: ${price}</p>
+      <p>Costo Envio: ${shippingCost}</p>
+      <p>Costo total: ${total}</p>
     </MyOrderCardContainer>
   );
 };

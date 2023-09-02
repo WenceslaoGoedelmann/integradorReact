@@ -1,7 +1,8 @@
+
+
 export const addItemToCart = (cartItems, product) => {
     const productInCart = cartItems.find(item => item.id === product.id);
-  
-    if (productInCart) {
+     if (productInCart) {
       return cartItems.map(item =>
         item.id === productInCart.id
           ? { ...item, quantity: item.quantity + 1 }
@@ -24,11 +25,24 @@ export const addItemToCart = (cartItems, product) => {
   
     return cartItems.filter(item => item.id !== productToRemove.id);
   };
+
+
+
   
   export const resetShippingCost = (cartItems, shippingCost) => {
-    if (cartItems.length === 1 && cartItems[0].quantity === 1) {
+  
+    console.log(cartItems)
+    const totalPrice = cartItems.reduce(
+      (acc, item) => (acc += item.price * item.quantity ),
+      0
+    );
+    
+/*     if (!cartItems.length) {
       return 0;
-    }
+    }  */
+     if (totalPrice>=1000) {
+      return 0;
+    }   
     return shippingCost;
   };
   

@@ -12,27 +12,51 @@ export const NavbarContainerStyled = styled.div`
     position: fixed; 
     top: 0; 
     z-index: 1;
-    background-color: rgb(50, 50, 50); 
+    background-color: rgb(70, 70, 70); 
+    border-radius: 0 0 1.5rem 1.5rem;
+    box-shadow: 0 0 10px 10px black;
+    @media (max-width: 750px) {
+      height: 80px;
+      padding: 0px 30px 0px 20px;
+    }
+`;
+export const LogoContainer = styled.div`
+img{
+  border-radius: 5px;
+  @media (max-width: 750px) {
+    width: 80;
+    height: 50px;
+    }
+}
+
+
 `;
 export const UserContainer = styled.div`
 display: flex;
 align-items: center;
-gap: 20px; 
+
 font-size: 20px;
 color: white;
 cursor: pointer;
 margin-right:20px;
+
+  @media (max-width: 750px) {
+    margin-right:10px;
+    font-size: 15px;
+    }
 
 `;
 export const RegisterContainer = styled.div`
 display: flex;
 align-items: center;
-gap: 20px; 
 font-size: 20px;
 color: white;
 cursor: pointer;
 margin-right:20px;
-
+@media (max-width: 750px) {
+    font-size: 15px;
+    margin-right:10px;
+    }
 `;
 
 export const CartNavStyled = styled.div`
@@ -40,6 +64,9 @@ font-size: 20px;
 color: white;
 cursor: pointer;
 position: relative;
+@media (max-width: 750px) {
+      font-size: 16px;
+    }
 
   span {
     position: absolute;
@@ -57,6 +84,11 @@ position: relative;
     align-items: center;
     padding-left: 1px; 
     border-radius: 50%;
+    @media (max-width: 750px) {
+      font-size: 8px;
+      height: 15px;
+    width: 15px;
+    }
   }
 `;
 
@@ -69,7 +101,7 @@ export const ModalOverlayStyled = styled(motion.div)`
   top: 0;
   left: 0;
   z-index: 50;
-  width: calc(100vw - 450px);
+  width: 100%;
   height: 100%;
   ${({ isHidden }) =>
     !isHidden &&

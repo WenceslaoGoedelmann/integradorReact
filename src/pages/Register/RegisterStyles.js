@@ -16,6 +16,11 @@ export const RegisterContainer = styled.div`
   border-radius: 10px;
   max-width: 550px;
   box-shadow: 10px 5px 5px black;
+  h1{
+      @media (max-width: 750px) {
+    font-size: 22px;
+    }
+  }
 `;
 
 export const Form = styled(FormikForm)`
@@ -27,6 +32,9 @@ export const Form = styled(FormikForm)`
   gap: 20px;
   p{
     cursor: pointer;
+    @media (max-width: 750px) {
+    font-size: 13px;
+    }
   }
 `;
 export const RegisterWrapper = styled.div`

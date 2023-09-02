@@ -33,7 +33,7 @@ const CheckoutForm = ({ cartItems, shippingCost, totalPrice }) => {
          
           try {
             await createOrder(orderData, dispatch, currentUser);
-            navigate("/");
+            navigate("/confirmed");
             dispatch(clearCart());
           } catch (error) {
             alert("Oops, algo salió mal al crear la orden");

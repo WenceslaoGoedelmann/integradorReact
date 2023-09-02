@@ -10,6 +10,10 @@ export const CategoriaContainerStyled = styled(motion.div)`
     box-shadow: 10px 5px 5px black;
     background-color: ${({ selected }) =>
     selected ? 'grey' : 'rgb(50, 50, 50)'};
+    @media (max-width: 750px) {
+        font-size: 8px;
+        
+    }
 `;
 export const CategoriasContainerStyled = styled.div`
     display: flex;

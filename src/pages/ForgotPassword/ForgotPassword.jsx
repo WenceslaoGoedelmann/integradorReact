@@ -5,8 +5,10 @@ import LoginInput from '../../components/UI/LoginInput/LoginInput'
 import { registerInitialValues } from '../../formik/initialValues'
 import { registerValidationSchema } from '../../formik/validationSchema'
 import Submit from '../../components/UI/Sumit/Submit'
+import { useNavigate } from 'react-router-dom'
 
 const ForgotPassword = () => {
+  const navigate = useNavigate();
   return (
     <ForgotWrapper>
     <ForgotContainer>
@@ -17,7 +19,7 @@ const ForgotPassword = () => {
         >
             <Form>
             <LoginInput type='text' name="email" placeholder='Mail de recuperación' />
-            <Submit type='button' onClick={e => e.preventDefault()}>Enviar</Submit>
+            <Submit type='button' onClick={() => navigate('/')}>Enviar</Submit>
             </Form>  
               
         </Formik>    

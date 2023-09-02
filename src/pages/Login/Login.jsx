@@ -39,8 +39,8 @@ const Login = () => {
           <LoginInput type='text' name='email' placeholder='Email' />
           <LoginInput type='password' name='password' placeholder='Password' />
 
-          <p onClick={() => navigate('/forgot-password')}>¿Olvidaste la contraseña? Reestablecela.</p>
-          <p onClick={() => navigate('/register')}>¿No tenes cuenta? Registrate.</p>
+          <h4 onClick={() => navigate('/forgot-password')}>¿Olvidaste la contraseña? Reestablecela.</h4 >
+          <h4 onClick={() => navigate('/register')}>¿No tenes cuenta? Registrate.</h4 >
           <Submit type='button'> {isSubmitting ? <Loader /> : "Iniciar Sesión"}</Submit>
           </Form>  
           )}

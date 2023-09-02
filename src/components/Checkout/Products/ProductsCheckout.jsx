@@ -11,7 +11,7 @@ const ProductsCheckout = ({ cartItems, shippingCost, totalPrice }) => {
           cartItems.length ? (
             cartItems.map(item => <ProductCheckoutCard key={item.id} {...item} />)
           ) : (
-            <p>Compra algo</p>
+            <p>Aun no hay productos en tu carrito</p>
           )
         }
       

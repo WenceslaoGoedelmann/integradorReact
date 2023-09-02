@@ -13,6 +13,10 @@ export const LoginInputStyled = styled.input`
   border-radius: 15px;
   border: ${({ isError }) => (isError ? '1px solid #fb103d ' : 'none')};
   outline: none;
+  @media (max-width: 750px) {
+    width:200px;
+    padding: 0.8rem 1.2rem;
+    }
 `;
 
 export const ErrorMessageStyled = styled.p`

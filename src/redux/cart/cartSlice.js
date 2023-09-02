@@ -4,7 +4,7 @@ const {
   removeItemFromCart,
   resetShippingCost,
 } = require('./cart-utils');
-const { SHIPPING_COST } = require('../../utils/constants');
+const { SHIPPING_COST, SHIPPING_FREE } = require('../../utils/constants');
 
 const initialState = {
   cartItems: [],
@@ -20,7 +20,7 @@ const cartSlice = createSlice({
       return {
         ...state,
         cartItems: addItemToCart(state.cartItems, action.payload),
-        shippingCost: SHIPPING_COST,
+        shippingCost: resetShippingCost(state.cartItems,SHIPPING_COST),
       };
     },
     removeToCart: (state, action) => {

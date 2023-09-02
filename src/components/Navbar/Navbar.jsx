@@ -5,12 +5,14 @@ import {
   NavbarContainerStyled,
   RegisterContainer,
   LinksContainer,
+  LogoContainer,
 } from "./NabarStyles";
-import img_Logo2 from "../Images/img_Logo2.png";
 import { Link, useNavigate } from "react-router-dom";
 import CartIcon from "./CartIcon/CartIcon";
 import ModalCart from "./ModalCart/ModalCart";
 import { useSelector } from "react-redux";
+import { toggleHiddenMenu } from '../../redux/user/userSlice';
+import { FaUser} from 'react-icons/fa';
 
 const Navbar = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
@@ -18,9 +20,12 @@ const Navbar = () => {
   return (
     <NavbarContainerStyled>
       <ModalCart />
+      <LogoContainer>
       <Link to="/">
-        <img src= 'https://res.cloudinary.com/dtsltqjuw/image/upload/v1692312450/MySecurity/img_Logo2_ybirp6.png' alt="Logo" />
+        <img src= 'https://res.cloudinary.com/dtsltqjuw/image/upload/v1693405553/MySecurity/img_Logo2-transparent_xf9xfm.png' alt="Logo" />
       </Link>
+      </LogoContainer>
+      <FaUser />
       <LinksContainer>
       <UserContainer
         onClick={() => (currentUser ? navigate("/user") : navigate("/login"))}

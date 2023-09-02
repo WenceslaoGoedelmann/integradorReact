@@ -10,6 +10,7 @@ const AboutUs = () => {
         <AboutUsContainerText>
             <h2>#MySecurity</h2>
             <p>Somos representantes oficiales de sistemas electrónicos de seguridad y sistemas de videos X-28.</p>  
+            <p>ENVIOS GRATIS A PARTIR DE $10.000!!!</p>
         </AboutUsContainerText>
     </AboutUsContainerStyled>
   )

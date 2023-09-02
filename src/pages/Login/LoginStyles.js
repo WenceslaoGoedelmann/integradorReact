@@ -13,6 +13,15 @@ export const LoginContainer = styled.div`
   padding: 10px;
   border-radius: 10px;
   box-shadow: 10px 5px 5px black;
+  @media (max-width: 750px) {
+    width:300px;
+    gap: 5px;
+    }
+    h1{
+      @media (max-width: 750px) {
+    font-size: 22px;
+    }
+    }
 
 `;
 
@@ -23,8 +32,15 @@ export const Form = styled(FormikForm)`
   justify-content: center;
   padding: 0.5rem 2rem;
   gap: 20px;
-  p{
+  @media (max-width: 750px) {
+    gap: 10px;
+    }
+    h4 {
+      text-align: center;
     cursor: pointer;
+    @media (max-width: 750px) {
+    font-size: 12px;
+    }
   }
 `;
 export const LoginWrapper = styled.div`
