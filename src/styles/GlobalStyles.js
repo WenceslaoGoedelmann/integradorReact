@@ -16,7 +16,7 @@ html{
 }
 body{
     width: 100%;
-    background-color: red;
+    background-color: rgb(50, 50, 50);
 }
 
 

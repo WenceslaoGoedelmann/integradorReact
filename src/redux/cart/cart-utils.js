@@ -30,8 +30,6 @@ export const addItemToCart = (cartItems, product) => {
 
   
   export const resetShippingCost = (cartItems, shippingCost) => {
-  
-    console.log(cartItems)
     const totalPrice = cartItems.reduce(
       (acc, item) => (acc += item.price * item.quantity ),
       0

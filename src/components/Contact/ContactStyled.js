@@ -5,6 +5,9 @@ export const ContactContainerStyled = styled.div`
   flex-direction: row;
   padding: 30px;
   justify-content: space-evenly;
+  @media (max-width: 320px) {
+    padding: 20px;
+    }
 `;
 export const ContactInfo = styled.div`
   display: flex;
